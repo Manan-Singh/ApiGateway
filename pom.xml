@@ -16,14 +16,17 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <start-class>com.citi.training.swifttrading.AppConfig</start-class>
     </properties>
 
     <dependencies>
-        <!-- TODO: ADD AFTER CONFIGURING DB PROPERTIES
+        <!-- TODO: ADD AFTER CONFIGURING ACTIVEMQ PROPERTIES
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-activemq</artifactId>
         </dependency>
+        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -33,12 +36,19 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-        -->
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!--
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+            <version>2.0.3.RELEASE</version>
+        </dependency>
+        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
