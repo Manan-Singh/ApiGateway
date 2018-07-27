@@ -2,6 +2,7 @@ package app.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name="trades")
@@ -15,7 +16,7 @@ public class Trade implements Serializable {
     @Column(name="id")
     private Integer id;
 
-    @Column(name="tradeType") private String tradeType;
+    @Column(name="trade_type") private String tradeType;
 
     @Column(name="price") private Float price;
 
@@ -23,7 +24,9 @@ public class Trade implements Serializable {
 
     @Column(name="stock") private String stock;
 
-    @Column(name="dateExecuted") private String dateExecuted;
+    @Column(name="date_executed")
+    @Temporal(TemporalType.DATE)
+    private Date dateExecuted;
 
     public Integer getId() {
         return id;
@@ -65,11 +68,11 @@ public class Trade implements Serializable {
         this.stock = stock;
     }
 
-    public String getDateExecuted() {
+    public Date getDateExecuted() {
         return dateExecuted;
     }
 
-    public void setDateExecuted(String dateExecuted) {
+    public void setDateExecuted(Date dateExecuted) {
         this.dateExecuted = dateExecuted;
     }
 

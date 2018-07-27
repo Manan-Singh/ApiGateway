@@ -1,22 +1,22 @@
 CREATE SCHEMA `swift_mysql` ;
 
+
 CREATE TABLE `swift_mysql`.`strategies` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `strategyType` VARCHAR(45) NOT NULL,
-  `stock` VARCHAR(45) NOT NULL,
-  `entry` FLOAT NOT NULL,
-  `exit` FLOAT NOT NULL,
-  `active` VARCHAR(45) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `strategy_type` varchar(45) NOT NULL,
+  `stock` varchar(45) NOT NULL,
+  `entry` float NOT NULL,
+  `exit` float NOT NULL,
+  `active` varchar(45) NOT NULL,
   PRIMARY KEY (`id`));
 
 
 CREATE TABLE `swift_mysql`.`trades` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `tradeType` VARCHAR(45) NOT NULL,
-  `entry` FLOAT NOT NULL,
-  `exit` INT NOT NULL,
-  `stock` VARCHAR(45) NOT NULL,
-  `dateExecuted` DATETIME NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `strategy_id` int(11) NOT NULL,
+  `trade_type` varchar(45) NOT NULL,
+  `price` float NOT NULL,
+  `size` int(11) NOT NULL,
+  `stock` varchar(45) NOT NULL,
+  `date_executed` datetime NOT NULL,
   PRIMARY KEY (`id`));
-
-

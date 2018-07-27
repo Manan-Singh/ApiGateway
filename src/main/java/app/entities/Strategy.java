@@ -16,6 +16,8 @@ public class Strategy implements Serializable {
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="id") private Integer id;
 
+    @Column(name="strategy_type") private String strategyType;
+
     @Column(name="stock") private String stock;
 
     @Column(name="entry") private Float entry;
@@ -23,8 +25,6 @@ public class Strategy implements Serializable {
     @Column(name="exit") private Float exit;
 
     @Column(name="active") private String active;
-
-    @Column(name="strategyType") private String strategyType;
 
     public Integer getId() {
         return id;
