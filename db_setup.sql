@@ -1,6 +1,6 @@
-CREATE SCHEMA `db_example` ;
+CREATE SCHEMA `swift_mysql` ;
 
-CREATE TABLE `db_example`.`strategies` (
+CREATE TABLE `swift_mysql`.`strategies` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `strategyType` VARCHAR(45) NOT NULL,
   `stock` VARCHAR(45) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE `db_example`.`strategies` (
   PRIMARY KEY (`id`));
 
 
-CREATE TABLE `db_example`.`trades` (
+CREATE TABLE `swift_mysql`.`trades` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `tradeType` VARCHAR(45) NOT NULL,
   `entry` FLOAT NOT NULL,
