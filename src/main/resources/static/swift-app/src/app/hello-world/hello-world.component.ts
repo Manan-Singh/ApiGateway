@@ -1,3 +1,4 @@
+///<reference path="../../../node_modules/rxjs/internal/Observable.d.ts"/>
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import { UserServiceService} from '../user-service.service';
@@ -12,7 +13,9 @@ export class HelloWorldComponent implements OnInit {
 
   ngOnInit() {
     console.log("Hello world prints here: ");
-    console.log(this.userService.getHelloWorld());
+    this.userService.getHelloWorld()
+      .subscribe(data=>{console.log(data)});
+    console.log("hmm");
   }
 
 }
