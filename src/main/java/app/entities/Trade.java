@@ -15,7 +15,7 @@ public class Trade implements Serializable {
     @Column(name="id")
     private Integer id;
 
-    @Column(name="trade_type") private String tradeType;
+    @Column(name="tradeType") private String tradeType;
 
     @Column(name="price") private Float price;
 
@@ -23,7 +23,7 @@ public class Trade implements Serializable {
 
     @Column(name="stock") private String stock;
 
-    @Column(name="date_executed") private String dateExecuted;
+    @Column(name="dateExecuted") private String dateExecuted;
 
     public Integer getId() {
         return id;

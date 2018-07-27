@@ -24,7 +24,7 @@ public class Strategy implements Serializable {
 
     @Column(name="active") private String active;
 
-    @Column(name="strategy_type") private String strategyType;
+    @Column(name="strategyType") private String strategyType;
 
     public Integer getId() {
         return id;
