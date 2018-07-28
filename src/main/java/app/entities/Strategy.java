@@ -13,7 +13,7 @@ public class Strategy implements Serializable {
     }
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id") private Integer id;
 
     @Column(name="strategy_type") private String strategyType;
@@ -22,7 +22,7 @@ public class Strategy implements Serializable {
 
     @Column(name="entry") private Float entry;
 
-    @Column(name="exit") private Float exit;
+    //@Column(name="exit") private Float exit;
 
     @Column(name="active") private String active;
 
@@ -42,13 +42,13 @@ public class Strategy implements Serializable {
         this.entry = entry;
     }
 
-    public Float getExit() {
+    /*public Float getExit() {
         return exit;
-    }
+    }*/
 
-    public void setExit(Float exit) {
+    /*public void setExit(Float exit) {
         this.exit = exit;
-    }
+    }*/
 
     public String getStock() {
         return stock;

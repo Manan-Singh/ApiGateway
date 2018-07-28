@@ -12,7 +12,7 @@ public class Trade implements Serializable {
     }
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
     private Integer id;
 
@@ -76,7 +76,7 @@ public class Trade implements Serializable {
         this.dateExecuted = dateExecuted;
     }
 
-    @JoinColumn (name="strategy_id", referencedColumnName="id", nullable = false)
+    @JoinColumn (name="strategy_id", referencedColumnName="id", nullable = true)
     @ManyToOne
     private Strategy strategy;
 
