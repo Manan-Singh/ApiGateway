@@ -76,7 +76,7 @@ public class Trade implements Serializable {
         this.dateExecuted = dateExecuted;
     }
 
-    @JoinColumn (name="strategy_id", referencedColumnName="id", nullable = true)
+    @JoinColumn (name="strategy_id", referencedColumnName="id")
     @ManyToOne
     private Strategy strategy;
 

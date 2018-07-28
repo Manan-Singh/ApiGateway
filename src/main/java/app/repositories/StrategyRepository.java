@@ -10,5 +10,5 @@ public interface StrategyRepository extends JpaRepository<Strategy, Integer> {
 
     Iterable<Strategy> findByStock(@Param("stock") String stock);
 
-    Iterable<Strategy> findByStrategyType(@Param("strategyType") String strategy_type);
+    Iterable<Strategy> findByStrategyType(@Param("strategyType") String strategyType);
 }

@@ -1,0 +1,21 @@
+POST: localhost:8081/strategies
+
+Content-Type : application/json
+
+{
+	"stock": "GOOG",
+	"active": "yes",
+	"entry": 1000,
+	"strategyType": "bollinger"
+}
+
+POST: localhost:8081/trades
+
+Content-Type : application/json
+
+{
+	"price" : 300.50,
+	"tradeType" : "buy",
+	"stock": "GOOG",
+	"strategy" : "http://localhost:8081/strategies/2"
+}
