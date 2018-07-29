@@ -74,8 +74,16 @@ public class Strategy implements Serializable {
         this.strategyType = strategyType;
     }
 
-    // Adding relationships
-    @OneToMany(mappedBy="strategy", cascade={CascadeType.MERGE, CascadeType.PERSIST})
+    /* Bidirectional relationship between Strategy and Trade
+
+    NOTE: bidirectional relationship not good for a (one : very many) relationship
+
+    cascade: for pushing entity state transitions to the database, including deleting trades (child entities)
+        when a strategy (parent entity) is deleted
+    orphanRemoval: ORM-specific, marks a trade (child entity) to be removed when it no longer references
+        a strategy (parent entity)
+    */
+    @OneToMany(mappedBy="strategy", cascade={CascadeType.ALL}, orphanRemoval = true)
     private List<Trade> trades = new ArrayList<Trade>();
 
     public List<Trade> getTrades() {
